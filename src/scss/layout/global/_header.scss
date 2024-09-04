@@ -3,9 +3,50 @@
 // -----------------------------------------------------------------------------
 
 #header {
+  height: 759px;
+  background-image: url("../assets/images/pages/home/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  .container {
+    max-width: 1459px;
+  }
 }
 
 .header {
+  &__wrapper {
+    margin-top: 10px;
+    padding: 12px 80px 10px;
+    border-radius: 25px;
+    background: #04171e2b;
+  }
 
+  &__logo {
+    display: flex;
+    gap: 16px;
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--title {
+      color: $color-text__green;
+      // font-family: HeliosExt;
+
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+    }
+
+    &--description {
+      color: $color-text__white;
+      // font-family: Jost;
+
+      font-size: 16px;
+      letter-spacing: 0.48px;
+    }
+  }
 }
