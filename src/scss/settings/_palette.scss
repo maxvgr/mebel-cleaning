@@ -1,6 +1,7 @@
 // Цветовая палитра блоков
 $palette-white: #ffffff;
 $palette-black: #000000;
+$palette-green: #77C01C;
 
 // Цветовая палитра текста
 $color-text__primary: #000000;
@@ -8,7 +9,7 @@ $color-text__black: #000000;
 $color-text__white: #ffffff;
 $color-text__green: #76D104;
 
-$link-hover-color: #60d2ff !default;
+$link-hover-color: #76D104 !default;
 
 body {
   color: $color-text__primary;

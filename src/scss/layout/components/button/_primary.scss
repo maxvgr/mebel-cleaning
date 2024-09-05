@@ -1,2 +1,8 @@
 .button-primary {
+  padding: 13px 24px;
+  border-radius: 15px;
+  background: $palette-green;
+  color: $color-text__white;
+  font-weight: 600;
+  white-space: nowrap;
 }

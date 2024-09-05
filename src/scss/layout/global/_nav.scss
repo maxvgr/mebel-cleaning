@@ -4,9 +4,14 @@
 
 .nav {
   &__list {
+    display: flex;
+    gap: 29px;
   }
 
   &__item {
+    color: $color-text__white;
+    letter-spacing: 0.48px;
+    white-space: nowrap;
   }
 
   &__link {

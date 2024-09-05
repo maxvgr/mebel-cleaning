@@ -2,12 +2,25 @@
 // В этом файле подключаются все шрифты через font-face, и задаются основные настройки типографики
 // -----------------------------------------------------------------------------
 
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Bold", 700);
+@include font-face("Jost", "../assets/fonts/Jost/Jost-Light", 300);
+@include font-face("Jost", "../assets/fonts/Jost/Jost-Regular", 400);
+@include font-face("Jost", "../assets/fonts/Jost/Jost-Medium", 500);
+@include font-face("Jost", "../assets/fonts/Jost/Jost-Bold", 700);
 
-$font-default: "Roboto", sans-serif; // Семейство по умолчанию
+@include font-face("Heliosext", "../assets/fonts/HeliosExt/Heliosext-Light", 300);
+@include font-face("Heliosext", "../assets/fonts/HeliosExt/Heliosext-Regular", 400);
+@include font-face("Heliosext", "../assets/fonts/HeliosExt/Heliosext-Medium", 500);
+@include font-face("Heliosext", "../assets/fonts/HeliosExt/Heliosext-Bold", 700);
+
+@include font-face("Mulish", "../assets/fonts/Mulish/Mulish-Light", 300);
+@include font-face("Mulish", "../assets/fonts/Mulish/Mulish-Regular", 400);
+@include font-face("Mulish", "../assets/fonts/Mulish/Mulish-Medium", 500);
+@include font-face("Mulish", "../assets/fonts/Mulish/Mulish-Bold", 700);
+
+
+$font-default: "Jost", sans-serif; // Семейство по умолчанию
+$font-second: "Heliosext", sans-serif; // Семейство по умолчанию
+$font-title: "Mulish", sans-serif; // Семейство по умолчанию
 
 /* Размеры заголовков */
 $font__title--large: 64px;

@@ -15,6 +15,10 @@
 
 .header {
   &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 24px;
+    align-items: center;
     margin-top: 10px;
     padding: 12px 80px 10px;
     border-radius: 25px;
@@ -33,20 +37,37 @@
 
     &--title {
       color: $color-text__green;
-      // font-family: HeliosExt;
-
       font-weight: 700;
-      font-size: 24px;
+      font-size: $font__text--large;
+      font-family: $font-second;
       letter-spacing: 0.48px;
       text-transform: uppercase;
     }
 
     &--description {
       color: $color-text__white;
-      // font-family: Jost;
-
-      font-size: 16px;
       letter-spacing: 0.48px;
+      white-space: nowrap;
     }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 11px;
+  }
+
+  &__phone {
+    color: $color-text__white;
+    font-weight: 600;
+    font-size: $font__text--big;
+    letter-spacing: 0.54px;
+    white-space: nowrap;
   }
 }
