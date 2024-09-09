@@ -1,0 +1,65 @@
+.feedback {
+  height: 488px;
+  background: url("../assets/images/pages/home/bg-group-form.svg"), url("../assets/images/pages/home/bg-mail-form.png"),
+    linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
+  background-position: top 10px left 20px, bottom right 130px, top left;
+  background-repeat: no-repeat, no-repeat;
+
+  &__title {
+    padding-top: 62px;
+    color: $color-text__white;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 190%; /* 102.6px */
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.48px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    padding-top: 37px;
+    color: $color-text__white;
+    font-size: 26px;
+    line-height: 114%; /* 29.64px */
+  }
+
+  .socials__items {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__text {
+    padding-top: 31px;
+    color: $color-text__white;
+    font-size: 26px;
+    line-height: 114%; /* 29.64px */
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+  }
+
+  &__input {
+    & > input {
+      padding: 18px 20px;
+      border: none;
+      border-radius: 7px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.25);
+      color: $color-text__white;
+      font-size: 18px;
+      line-height: 114%; /* 20.52px */
+    }
+  }
+}
