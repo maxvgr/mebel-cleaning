@@ -3,10 +3,10 @@
 // -----------------------------------------------------------------------------
 
 #header {
-  height: 759px;
-  background-image: url("../assets/images/pages/home/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 84px;
+  // background-image: url("../assets/images/pages/home/bg.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   .container {
     max-width: 1459px;
@@ -15,6 +15,8 @@
 
 .header {
   &__wrapper {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
     gap: 24px;
