@@ -62,4 +62,19 @@
       line-height: 114%; /* 20.52px */
     }
   }
+
+  .button {
+    padding: 17px 23px 17px 32px;
+    transition: $transition-time ease;
+
+    svg {
+      transition: $transition-time ease;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(8px);
+      }
+    }
+  }
 }

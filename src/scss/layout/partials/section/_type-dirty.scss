@@ -1,0 +1,32 @@
+.type-dirty {
+  &__title {
+    padding-top: 54px;
+    color: $color-text__grey;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 114%; /* 68.4px */
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 32px;
+    margin-top: 50px;
+    margin-bottom: 90px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__text {
+    padding-right: 20px;
+    color: #434c52;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 114%; /* 22.8px */
+  }
+}
