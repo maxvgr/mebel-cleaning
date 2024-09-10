@@ -1,0 +1,40 @@
+.reviews {
+  margin-top: 60px;
+  margin-bottom: 69px;
+
+  &__title {
+    color: $color-text__grey;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 114%; /* 68.4px */
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .swiper-slide__wrapper {
+    padding: 30px 40px;
+    border: 1px solid #e2e2e2;
+  }
+
+  &-slide__header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    picture {
+      overflow: hidden;
+      width: 45px;
+      height: 45px;
+      border-radius: 60px;
+    }
+  }
+
+  &__text {
+    padding-top: 11px;
+  }
+
+}
