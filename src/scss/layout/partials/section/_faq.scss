@@ -1,6 +1,8 @@
 .faq {
   padding-bottom: 63px;
-  background: #eeeeee;
+  background: url("../assets/images/sections/faq/bg.svg") #eeeeee;
+  background-position: bottom 34px right 25px;
+    background-repeat: no-repeat;
 
   &__title {
     padding-top: 55px;
@@ -22,21 +24,25 @@
     }
 
     &.is-open {
-      .accordion__header {
+      .faq__header {
         &::before {
           transform: rotateX(180deg);
-
         }
       }
     }
   }
 
   .accordion__header {
+
+  }
+
+  &__header {
     display: flex;
     align-items: center;
     color: #22272B;
     font-size: 22px;
     line-height: 114%; /* 25.08px */
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -49,7 +55,7 @@
     }
   }
 
-  .accordion__body {
+  &__text {
     padding-top: 25px;
     padding-left: 60px;
     color: #22272B;

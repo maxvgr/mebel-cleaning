@@ -1,0 +1,97 @@
+.price-order {
+  &__wrapper {
+    position: relative;
+    margin-top: 46px;
+    padding: 25px 66px;
+    border-radius: 25px;
+    background: linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
+  }
+
+  &__title {
+    color: $color-text__white;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 105%; /* 37.8px */
+
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 124%; /* 22.32px */
+      letter-spacing: 0.54px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__form-first {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 620px;
+    padding-top: 11px;
+
+    input {
+      max-width: 200px;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    & > input,
+    textarea {
+      padding: 14px 20px;
+      border: none;
+      border-radius: 7px;
+      outline: none;
+      color: #828282;
+      font-size: 18px;
+      line-height: 114%; /* 20.52px */
+    }
+
+    input[type="file"] {
+      position: absolute;
+      z-index: -10;
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+    }
+  }
+
+  &__form-second {
+    display: grid;
+    grid-template-columns: 410px 150px 200px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__file {
+    color: #F4F4F4;
+    font-size: 18px;
+    line-height: 114%; /* 20.52px */
+    cursor: pointer;
+    text-decoration-line: underline;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    picture {
+      max-height: 273px;
+    }
+  }
+}
