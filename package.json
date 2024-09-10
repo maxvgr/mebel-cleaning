@@ -9,7 +9,7 @@
   },
   "repository": "github:acr0matic/frontend-reborn",
   "bugs": "https://github.com/acr0matic/frontend-reborn/issues",
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.4.1",
   "devDependencies": {
     "@nurminen/html-beautify-webpack-plugin": "^1.1.4",
     "@squoosh/lib": "^0.5.3",
@@ -79,7 +79,9 @@
     "create": "node ./node_scripts/create.js"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "imask": "^7.4.0",
+    "swiper": "^11.1.12",
     "vanilla-lazyload": "^17.8.5"
   }
 }
