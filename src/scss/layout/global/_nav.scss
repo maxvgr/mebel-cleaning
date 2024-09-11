@@ -28,4 +28,21 @@
 
     }
   }
+
+  &--footer {
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .nav__item {
+      color: #434C52;
+      letter-spacing: 0.48px;
+    }
+
+    .nav__link {
+
+    }
+  }
 }

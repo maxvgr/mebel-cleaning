@@ -6,4 +6,74 @@
 }
 
 .footer {
+  margin: 52px 0;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2.5fr 0.7fr 1fr 1fr 1.2fr;
+    gap: 30px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--title {
+      color: $color-text__green;
+      font-weight: 700;
+      font-size: $font__text--large;
+      font-family: $font-second;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+    }
+
+    &--description {
+      color: #434c52;
+      letter-spacing: 0.48px;
+      white-space: nowrap;
+    }
+  }
+
+  &__address,
+  &__copyright {
+    color: #9b9b9b;
+    line-height: 20px; /* 125% */
+  }
+
+  &__menu, &__services {
+    padding-top: 15px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    color: #4A3F3F;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+  }
+
+  &__last {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #9B9B9B;
+    text-align: right;
+
+    .button {
+      width: min-content;
+      margin-top: 15px;
+      margin-bottom: -40px;
+    }
+  }
 }
