@@ -11,4 +11,7 @@ $breakpoint-tablet: max-width map.get($grid-breakpoint, 'tablet');
 $breakpoint-notebook: max-width map.get($grid-breakpoint, 'notebook');
 $breakpoint-laptop: max-width map.get($grid-breakpoint, 'laptop');
 
+$mobile: 540px;
+$tablet: 800px;
+$notebook: 1200px;
 $laptop: 1400px;
