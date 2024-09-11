@@ -19,12 +19,14 @@
 
   ul {
     width: 100%;
-    min-width: 360px;
+    min-width: 250px;
 
     padding: 8px 0;
 
     border-radius: $border-radius;
     background-color: $palette-white;
+    // background-color: #04171e2b;
+
     transition: $transition-time ease;
   }
 
@@ -62,6 +64,8 @@
     left: 0;
 
     background-color: $palette-white;
+    // background-color: #04171e2b;
+
     box-shadow: 0 4px 6px 0 rgba(16, 73, 138, 0.2);
 
     opacity: 0;

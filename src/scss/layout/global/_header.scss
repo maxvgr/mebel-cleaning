@@ -72,4 +72,17 @@
     letter-spacing: 0.54px;
     white-space: nowrap;
   }
+
+  &__burger {
+    // @include breakpoint($breakpoint-laptop) {
+    //   display: block;
+    // }
+
+    display: none;
+
+    @media screen and (max-width: $laptop) {
+      display: block;
+    }
+  }
 }
+
