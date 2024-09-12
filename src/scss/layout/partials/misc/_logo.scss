@@ -1,6 +1,10 @@
 .logo {
+  @include breakpoint($breakpoint-mobile) {
+    gap: 9px;
+  }
+
   display: inline-flex;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
 
   transition: opacity $transition-time ease;

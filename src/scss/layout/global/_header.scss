@@ -15,6 +15,20 @@
 
 .header {
   &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      padding: 12px 10px 10px;
+    }
+    @include breakpoint($breakpoint-big-tablet) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr 0.5fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 0;
+      padding: 10px 0;
+      background: transparent;
+    }
+
     position: relative;
     z-index: 1;
     display: grid;
@@ -28,8 +42,21 @@
   }
 
   &__logo {
+    @include breakpoint($breakpoint-big-tablet) {
+      grid-column: 1/4;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      gap: 9px;
+    }
+
     display: flex;
     gap: 16px;
+
+    svg {
+      @include breakpoint($breakpoint-mobile) {
+        max-width: 46px;
+      }
+    }
 
     &--text {
       display: flex;
@@ -38,6 +65,11 @@
     }
 
     &--title {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+
       color: $color-text__green;
       font-weight: 700;
       font-size: $font__text--large;
@@ -47,13 +79,54 @@
     }
 
     &--description {
+      @include breakpoint($breakpoint-mobile) {
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: -0.2px;
+      }
+
       color: $color-text__white;
       letter-spacing: 0.48px;
       white-space: nowrap;
     }
   }
 
+  &__menu {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+
+    &-mobile {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: calc(100vh + 10px);
+      margin-top: -10px;
+      margin-right: -16px;
+      padding: 52px 80px 52px 40px;
+      background: linear-gradient(89deg, #17A5D3 5.9%, #008EBC 91.16%);
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-time ease;
+
+      &.is-active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+
+
   &__contacts {
+    @include breakpoint($breakpoint-big-tablet) {
+      grid-row: 3/4;
+      grid-column: 1/3;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      align-items: flex-start;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -66,6 +139,10 @@
   }
 
   &__phone {
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 14px;
+    }
+
     color: $color-text__white;
     font-weight: 600;
     font-size: $font__text--big;
@@ -73,15 +150,56 @@
     white-space: nowrap;
   }
 
+  &__button {
+    @include breakpoint($breakpoint-big-tablet) {
+      grid-row: 3/4;
+      grid-column: 3/5;
+    }
+
+    display: flex;
+    justify-content: center;
+
+    .button {
+      @include breakpoint($breakpoint-mobile) {
+        padding: 13px 18px;
+        letter-spacing: 0;
+      }
+    }
+  }
+
   &__burger {
-    // @include breakpoint($breakpoint-laptop) {
-    //   display: block;
-    // }
+    @include breakpoint($breakpoint-laptop) {
+      z-index: 10;
+      display: block;
+      grid-row: 1/2;
+      grid-column: 4/5;
+    }
 
     display: none;
+    justify-self: end;
 
-    @media screen and (max-width: $laptop) {
-      display: block;
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $palette-white;
     }
+
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+      background-color: $color-text__blue;
+    }
+  }
+
+  &__line {
+    @include breakpoint($breakpoint-mobile) {
+      display: block;
+      grid-column: 1/5;
+    }
+
+    display: none;
+    width: 100%;
+    height: 1px;
+    background: #797979;
   }
 }

@@ -17,15 +17,23 @@
   &__link {
   }
 
-
-
   &--header {
     .nav__item {
-
     }
 
     .nav__link {
+    }
+  }
 
+  &--mobile {
+    .nav__list {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav__item {
+      font-size: 20px;
+      letter-spacing: 0.6px;
     }
   }
 
@@ -37,12 +45,11 @@
     }
 
     .nav__item {
-      color: #434C52;
+      color: #434c52;
       letter-spacing: 0.48px;
     }
 
     .nav__link {
-
     }
   }
 }
