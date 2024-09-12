@@ -99,24 +99,24 @@
     &-mobile {
       position: absolute;
       top: 0;
-      right: 0;
+      right: -400px;
+      min-width: 300px;
       height: calc(100vh + 10px);
       margin-top: -10px;
       margin-right: -16px;
-      padding: 52px 80px 52px 40px;
-      background: linear-gradient(89deg, #17A5D3 5.9%, #008EBC 91.16%);
+      padding: 52px 40px;
+      background: linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
       opacity: 0;
       visibility: hidden;
       transition: $transition-time ease;
 
       &.is-active {
+        right: 0;
         opacity: 1;
         visibility: visible;
       }
     }
   }
-
-
 
   &__contacts {
     @include breakpoint($breakpoint-big-tablet) {
@@ -201,5 +201,29 @@
     width: 100%;
     height: 1px;
     background: #797979;
+  }
+
+  .mobile-catalog__hidden-menu {
+    position: relative;
+    height: 0;
+    padding: 0 0 0 20px;
+    background: transparent;
+    color: $color-text__white;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-time ease;
+
+
+    &.is-active {
+      height: auto;
+      padding-top: 10px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav__item  {
+      padding: 7px 0;
+    }
   }
 }
