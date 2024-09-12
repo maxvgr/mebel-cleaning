@@ -1,5 +1,14 @@
 .type-dirty {
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding-top: 42px;
+      font-size: 40px;
+      text-align: center;
+    }
+
     padding-top: 54px;
     color: $color-text__grey;
     font-weight: 600;
@@ -9,6 +18,15 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 37px 22px;
+      margin-top: 42px;
+  }
+  @include breakpoint($breakpoint-mobile) {
+    padding: 0 5px;
+}
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px 32px;
