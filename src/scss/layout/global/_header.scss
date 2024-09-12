@@ -20,10 +20,10 @@
     }
     @include breakpoint($breakpoint-big-tablet) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
     }
     @include breakpoint($breakpoint-mobile) {
       grid-template-columns: 1fr 0.5fr 1fr 1fr;
-      gap: 10px;
       margin-top: 0;
       padding: 10px 0;
       background: transparent;
