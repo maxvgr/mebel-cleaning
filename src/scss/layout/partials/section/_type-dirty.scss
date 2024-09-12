@@ -22,10 +22,11 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 37px 22px;
       margin-top: 42px;
-  }
-  @include breakpoint($breakpoint-mobile) {
-    padding: 0 5px;
-}
+      margin-bottom: 47px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 0 5px;
+    }
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);

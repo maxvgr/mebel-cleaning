@@ -1,7 +1,20 @@
 .professional {
+  @include breakpoint($breakpoint-tablet) {
+    padding-bottom: 30px;
+  }
+
   background: #eeeeee;
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding-top: 42px;
+      font-size: 40px;
+      text-align: center;
+    }
+
     padding-top: 72px;
     color: $color-text__white;
     font-weight: 600;
@@ -12,6 +25,13 @@
   }
 
   &__brands {
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
     display: flex;
     gap: 63px;
     justify-content: center;
@@ -19,6 +39,10 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 50px;
@@ -26,12 +50,24 @@
   }
 
   &__image {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+
     picture {
       margin-right: -300px;
     }
   }
 
   .advantages__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 40px;
+      text-align: center;
+    }
+
     padding-top: 14px;
     color: $color-text__white;
     font-weight: 600;
@@ -42,6 +78,9 @@
   }
 
   .advantages__items {
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 20px;
+    }
     // display: flex;
     // flex-direction: column;
 
@@ -50,6 +89,7 @@
 
     li {
       position: relative;
+      display: flex;
       margin: 0;
       padding: 30px 0 30px 76px;
       border-bottom: 1px solid #b09696;;
@@ -61,7 +101,8 @@
       &::before {
         content: counter(num);
         position: absolute;
-        top: 12px;
+        top: calc(50% - 26px);
+
         left: 0;
         display: inline-block;
         width: 58px;
