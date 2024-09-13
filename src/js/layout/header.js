@@ -1,5 +1,6 @@
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import MicroModal from 'micromodal';
 
 const hamburger = document.querySelector(".hamburger--spin");
 const mobileNavs = document.querySelector(".header__menu-mobile");
@@ -19,7 +20,9 @@ catalog.addEventListener("click", () => {
 });
 
 
-
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
+
+
+MicroModal.init();
