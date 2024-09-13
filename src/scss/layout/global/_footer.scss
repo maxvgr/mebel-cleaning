@@ -6,18 +6,54 @@
 }
 
 .footer {
+  @include breakpoint($breakpoint-mobile) {
+    margin: 52px 0 10px;
+  }
+
   margin: 52px 0;
 
+
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      grid-template-columns: 2.5fr 0.7fr 1fr 1.2fr;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 2fr 100px 1fr;
+      gap: 10px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
     display: grid;
     grid-template-columns: 2.5fr 0.7fr 1fr 1fr 1.2fr;
-    gap: 30px;
+    gap: 0 30px;
   }
 
   &__logo {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 2fr 100px 1fr;
+      gap: 5px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-column: 1/3;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    svg {
+      @include breakpoint($breakpoint-mobile) {
+        max-width: 46px;
+      }
+    }
+
+    .logo {
+      @include breakpoint($breakpoint-mobile) {
+        justify-content: center;
+      }
+    }
 
     &--text {
       display: flex;
@@ -26,6 +62,11 @@
     }
 
     &--title {
+      @include breakpoint($breakpoint-mobile) {
+        font-size: 20px;
+        letter-spacing: 0;
+      }
+
       color: $color-text__green;
       font-weight: 700;
       font-size: $font__text--large;
@@ -35,6 +76,12 @@
     }
 
     &--description {
+      @include breakpoint($breakpoint-mobile) {
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: -0.2px;
+      }
+
       color: #434c52;
       letter-spacing: 0.48px;
       white-space: nowrap;
@@ -47,33 +94,122 @@
     line-height: 20px; /* 125% */
   }
 
-  &__menu, &__services {
+  &__copyright {
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 18px;
+    }
+  }
+
+  &__menu,
+  &__services {
     padding-top: 15px;
   }
 
   &__contacts {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      justify-content: space-between;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-top: 15px;
-    color: #4A3F3F;
+    color: #4a3f3f;
     font-weight: 600;
     font-size: 18px;
     letter-spacing: 0.54px;
+
+    &--hidden {
+      @include breakpoint($breakpoint-laptop) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      display: none;
+    }
   }
 
   &__last {
+    @include breakpoint($breakpoint-notebook) {
+      grid-column: 2/4;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: 3/4;
+      grid-column: 2/3;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 18px;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    color: #9B9B9B;
+    color: #9b9b9b;
     text-align: right;
+  }
 
-    .button {
-      width: min-content;
-      margin-top: 15px;
-      margin-bottom: -40px;
+  .button {
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+      margin-top: 0;
+      margin-bottom: 0;
     }
+    @include breakpoint($breakpoint-mobile) {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    width: min-content;
+    margin-top: 15px;
+    margin-bottom: -40px;
+
+    &--hidden {
+      @include breakpoint($breakpoint-notebook) {
+        display: block;
+      }
+
+      display: none;
+    }
+  }
+
+  &__politika {
+    @include breakpoint($breakpoint-mobile) {
+      text-align: left;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  &__artfactor {
+    @include breakpoint($breakpoint-laptop) {
+      grid-column: 4/5;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      grid-column: 1/4;
+      text-align: center;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-column: 1/3;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 8px;
+    }
+
+    grid-column: 5/6;
+    color: #9b9b9b;
+    text-align: right;
   }
 }
