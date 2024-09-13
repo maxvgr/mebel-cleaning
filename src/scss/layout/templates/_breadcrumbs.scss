@@ -1,0 +1,8 @@
+.page__breadcrumbs {
+  @include breakpoint($breakpoint-big-tablet) {
+    padding-top: 190px;
+  }
+
+  padding-top: 120px;
+  // padding-left: 20px;
+}
