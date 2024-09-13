@@ -1,8 +1,21 @@
 .reviews {
+  @include breakpoint($breakpoint-mobile) {
+    margin-top: 31px;
+    margin-bottom: 31px;
+  }
+
   margin-top: 60px;
   margin-bottom: 69px;
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 40px;
+      text-align: center;
+    }
+
     color: $color-text__grey;
     font-weight: 600;
     font-size: 60px;
@@ -11,6 +24,10 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 20px;
+    }
+
     position: relative;
     margin-top: 50px;
   }

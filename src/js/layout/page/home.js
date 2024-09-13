@@ -60,11 +60,8 @@ new Swiper(".reviews .swiper", {
     260: {
       slidesPerView: 1,
     },
-    360: {
+    540: {
       slidesPerView: 2,
-    },
-    740: {
-      slidesPerView: 3,
     },
     1200: {
       slidesPerView: 3,
