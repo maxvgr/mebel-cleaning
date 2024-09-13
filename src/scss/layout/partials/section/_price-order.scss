@@ -1,5 +1,10 @@
 .price-order {
   &__wrapper {
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 15px;
+      padding: 25px;
+    }
+
     position: relative;
     margin-top: 46px;
     padding: 25px 66px;
@@ -8,6 +13,12 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 28px;
+    }
+
+    position: relative;
+    z-index: 1;
     color: $color-text__white;
     font-weight: 500;
     font-size: 36px;
@@ -27,6 +38,10 @@
   }
 
   &__form-first {
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -34,12 +49,18 @@
     padding-top: 11px;
 
     input {
+      @include breakpoint($breakpoint-tablet) {
+        width: 100%;
+        max-width: 100%;
+      }
+
       max-width: 200px;
     }
   }
 
   &__input {
     position: relative;
+    display: flex;
 
     & > input,
     textarea {
@@ -62,6 +83,13 @@
   }
 
   &__form-second {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 410px 150px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: 410px 150px 200px;
     gap: 10px;
@@ -70,6 +98,11 @@
 
     input {
       width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      max-height: 50px;
     }
   }
 
@@ -86,12 +119,23 @@
   }
 
   &__bg-image {
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+    }
+
     position: absolute;
     right: 0;
     bottom: 0;
 
     picture {
       max-height: 273px;
+    }
+  }
+
+  .button {
+    @include breakpoint($breakpoint-mobile) {
+      justify-content: center;
+      width: 100%;
     }
   }
 }
