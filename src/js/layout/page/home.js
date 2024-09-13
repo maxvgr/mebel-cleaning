@@ -28,10 +28,10 @@ new Swiper(".our-works .swiper", {
     360: {
       slidesPerView: 2,
     },
-    740: {
+    800: {
       slidesPerView: 3,
     },
-    1200: {
+    1500: {
       slidesPerView: 4,
     },
   },
