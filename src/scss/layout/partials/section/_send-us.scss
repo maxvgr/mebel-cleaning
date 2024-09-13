@@ -1,5 +1,26 @@
 .send-us {
   &__wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      background: url("../assets/images/sections/send-us/ellips-bg.svg"), linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
+      background-position: bottom right, top left;
+      background-size: 50%, 100%;
+      background-repeat: no-repeat;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      background-position: bottom right -200px, top left;
+      background-size: 90%, 100%;
+
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      background-position: bottom right -300px, top left;
+      background-size: 120%, 100%;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 40px 22px;
+      background-size: 140%, 100%;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 39px;
@@ -8,7 +29,8 @@
     background: url("../assets/images/sections/send-us/icon-bg.svg"),
       url("../assets/images/sections/send-us/ellips-bg.svg"), linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
     background-position: center right 175px, bottom right, top left;
-    background-repeat: no-repeat, no-repeat;
+    background-size: 7%, 37%, 100%;
+    background-repeat: no-repeat;
   }
 
   &__title {
