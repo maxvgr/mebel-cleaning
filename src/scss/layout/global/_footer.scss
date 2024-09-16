@@ -248,5 +248,38 @@
         letter-spacing: 0.54px;
       }
     }
+
+    &__form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin-top: 27px;
+
+      .price-order__input {
+        &:nth-child(3) {
+          grid-column: 1/3;
+
+          textarea {
+            width: 100%;
+          }
+        }
+
+        &:nth-child(4) {
+          grid-column: 1/3;
+          justify-self: center;
+        }
+
+        &:nth-child(5) {
+          grid-column: 1/3;
+          justify-self: center;
+        }
+      }
+
+      .button {
+        margin-top: 0;
+        margin-bottom: 6px;
+      }
+
+    }
   }
 }
