@@ -1,6 +1,7 @@
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import MicroModal from 'micromodal';
+import SmoothScroll from 'smooth-scroll';
 
 const hamburger = document.querySelector(".hamburger--spin");
 const mobileNavs = document.querySelector(".header__menu-mobile");
@@ -26,3 +27,12 @@ Fancybox.bind("[data-fancybox]", {
 
 
 MicroModal.init();
+
+const scrollParams = {
+  speed: 1000,
+  speedAsDuration: true,
+  offset: 0,
+  updateURL: false,
+};
+
+new SmoothScroll('a[href*="#"]', scrollParams);
