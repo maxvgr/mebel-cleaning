@@ -35,6 +35,12 @@
   &__form {
     position: relative;
     z-index: 10;
+
+    .wpcf7-response-output {
+      grid-column: 1/3;
+      border: none;
+      color: $color-text__white;
+    }
   }
 
   &__form-first {
@@ -62,8 +68,14 @@
     position: relative;
     display: flex;
 
-    & > input,
+    p, span {
+      width: 100%;
+    }
+
+    input,
     textarea {
+      width: 100%;
+      max-height: 60px;
       padding: 14px 20px;
       border: none;
       border-radius: 7px;
@@ -79,6 +91,11 @@
       width: 0.1px;
       height: 0.1px;
       opacity: 0;
+    }
+
+    .button {
+      margin-left: 48px;
+      color: $color-text__white;
     }
   }
 
@@ -107,11 +124,16 @@
   }
 
   &__file {
+    display: flex;
+    gap: 3px;
+    align-items: center;
     color: #F4F4F4;
     font-size: 18px;
     line-height: 114%; /* 20.52px */
+    white-space: nowrap;
     cursor: pointer;
     text-decoration-line: underline;
+
 
     &:hover {
       text-decoration-line: none;
