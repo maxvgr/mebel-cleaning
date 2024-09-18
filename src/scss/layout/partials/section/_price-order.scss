@@ -10,6 +10,14 @@
     padding: 25px 66px;
     border-radius: 25px;
     background: linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
+
+    .wpcf7-response-output {
+      position: relative;
+      z-index: 2;
+      margin: 10px 0 -10px !important;
+      border: none !important;
+      color: $color-text__white;
+    }
   }
 
   &__title {
