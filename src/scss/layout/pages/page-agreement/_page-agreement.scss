@@ -1,0 +1,30 @@
+.page-agreement {
+  &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    padding-top: 44px;
+    padding-bottom: 25px;
+    color: $color-text__grey;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 114%; /* 68.4px */
+    text-transform: uppercase;
+  }
+
+  &__content {
+    color: $color-text__black;
+    font-size: 18px;
+    line-height: 120%; /* 21.6px */
+
+    p {
+      padding: 8px 0;
+    }
+  }
+
+}
