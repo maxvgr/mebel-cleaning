@@ -92,6 +92,7 @@
     }
 
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     padding-top: 15px;
 
@@ -126,6 +127,7 @@
 
     input {
       width: 100%;
+      min-width: 100%;
       padding: 18px 20px;
       border: none;
       border-radius: 7px;
@@ -140,7 +142,7 @@
   .button {
     @include breakpoint($breakpoint-tablet) {
       max-width: fit-content;
-      margin-bottom: 47px;
+
     }
 
     padding: 17px 23px 17px 32px;
@@ -155,5 +157,13 @@
         transform: translateX(8px);
       }
     }
+  }
+
+  .price-order__soglasie {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 47px;
+    }
+
+    width:  100%;
   }
 }

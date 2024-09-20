@@ -10,5 +10,9 @@
 .page-second {
   .page__breadcrumbs {
     padding-top: 12px;
+
+    .nav--breadcrumb .nav__item {
+      color: #828282;
+    }
   }
 }
