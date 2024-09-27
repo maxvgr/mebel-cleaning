@@ -1,0 +1,72 @@
+.page-404 {
+  &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  &__title {
+    @include breakpoint($breakpoint-mobile) {
+      padding-top: 44px;
+    }
+
+    padding-top: 104px;
+    background: linear-gradient(79deg, #DBDBDB 5.53%, #17A5D3 89.92%);
+    -webkit-background-clip: text;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 114%; /* 136.8px */
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+
+    &-wrap {
+      @include breakpoint($breakpoint-mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+
+      span {
+        padding-bottom: 20px;
+        color: $color-text__blue;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 114%; /* 38.76px */
+        text-transform: uppercase;
+      }
+    }
+  }
+
+
+
+  &__text {
+    @include breakpoint($breakpoint-notebook) {
+      padding-bottom: 20px;
+    }
+
+    padding-bottom: 140px;
+    color: $color-text__primary;
+    font-size: 18px;
+    line-height: 126%;
+
+    span {
+      display: block;
+      padding-bottom: 20px;
+      color: $color-text__blue;
+      font-weight: 600;
+      line-height: 126%; /* 22.68px */
+      text-transform: uppercase;
+    }
+
+    a {
+      color: $color-text__blue;
+    }
+  }
+}

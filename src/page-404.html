@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<include src="layout/head.html"></include>
+
+<body class="page page-second">
+  <include src="layout/header-second.html"></include>
+
+  <main>
+    <div id="page-404" class="page__body">
+      <section class="section page-404">
+        <div class="container">
+          <include src="layout/template/breadcrumbs.html"></include>
+
+          <div class="page-404__wrapper">
+            <div class="page-404__info">
+              <div class="page-404__title-wrap">
+                <h1 class="page-404__title">
+                  404
+                </h1>
+                <!-- /.section__title -->
+                <span>ошибка</span>
+              </div>
+              <!-- /.page-404__title-wrap -->
+
+              <div class="page-404__text">
+                <span>кажется, что-то пошло не так</span>
+                Страница на которую вы пытаетесь перейти не существует или была удалена. Перейдите на <a href="/" class="">главную</a> страницу или вернитесь <a href="##"  onclick="history.go(-1);return false;" class="">назад</a>
+              </div>
+              <!-- /.page-404__text -->
+
+            </div>
+            <!-- /.page-404__info -->
+            <div class="page-404__img">
+              <picture class="lazy">
+                <img alt="" class="image image--cover lazy__item" data-src="assets/images/pages/404/error.jpg">
+              </picture>
+            </div>
+            <!-- /.page-404__img -->
+
+          </div>
+          <!-- /.page-404__wrapper -->
+
+
+
+
+        </div>
+        <!-- /.container -->
+      </section>
+
+    </div>
+    <!-- /.page__body -->
+  </main>
+
+  <include src="layout/footer.html"></include>
+</body>
+
+</html>
