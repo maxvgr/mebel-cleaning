@@ -1,0 +1,26 @@
+.page-about {
+  &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 43px;
+  }
+
+  &__info {
+    font-size: 18px;
+    line-height: 114%; /* 20.52px */
+
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  &__img {
+    @include breakpoint($breakpoint-notebook) {
+      display: none;
+    }
+  }
+}
