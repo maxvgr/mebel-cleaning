@@ -1,0 +1,52 @@
+.page-contacts {
+  &__wrapper {
+    @include breakpoint($breakpoint-big-tablet) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+
+  &__info {
+    color: $color-text__black;
+    font-size: 18px;
+    line-height: 130%;
+
+    span {
+      display: block;
+      color: #9B9B9B;
+    }
+
+    span:not(:first-child) {
+      padding-top: 21px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    padding-top: 21px;
+  }
+
+  &__title {
+    padding-top: 50px;
+    color: $color-text__blue;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 114%; /* 27.36px */
+    text-transform: uppercase;
+  }
+
+  p {
+    padding-top: 15px;
+  }
+
+  &__map {
+    min-height: 400px;
+  }
+
+}
