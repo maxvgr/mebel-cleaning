@@ -1,0 +1,22 @@
+.page-works {
+  &__wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 100px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 80px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      margin-bottom: 40px;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 130px;
+  }
+
+}
