@@ -44,6 +44,10 @@
     padding: 12px 70px 10px;
     border-radius: 25px;
     background: #04171e2b;
+
+    &--fixed {
+      position: fixed;
+    }
   }
 
   &__logo {
