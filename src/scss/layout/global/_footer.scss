@@ -63,16 +63,17 @@
 
     &--title {
       @include breakpoint($breakpoint-mobile) {
-        font-size: 20px;
-        letter-spacing: 0;
+        font-size: 18px;
+        letter-spacing: -1px;
       }
 
       color: $color-text__green;
       font-weight: 700;
-      font-size: $font__text--large;
+      font-size: 22px;
       font-family: $font-second;
       letter-spacing: 0.48px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     &--description {

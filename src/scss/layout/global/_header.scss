@@ -50,6 +50,7 @@
         width: calc(100% - 32px)
       }
       @include breakpoint($breakpoint-mobile) {
+        z-index: 15;
         width: 100%;
         margin: 0 -16px;
         padding: 0 16px 10px;
@@ -86,16 +87,17 @@
 
     &--title {
       @include breakpoint($breakpoint-mobile) {
-        font-size: 18px;
-        letter-spacing: 0;
+        font-size: 17px;
+        letter-spacing: -1.5px;
       }
 
       color: $color-text__green;
       font-weight: 700;
-      font-size: $font__text--large;
+      font-size: 22px;
       font-family: $font-second;
       letter-spacing: 0.48px;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     &--description {
