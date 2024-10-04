@@ -46,6 +46,17 @@
     background: #04171e2b;
 
     &--fixed {
+      @include breakpoint($breakpoint-notebook) {
+        width: calc(100% - 32px)
+      }
+      @include breakpoint($breakpoint-mobile) {
+        width: 100%;
+        margin: 0 -16px;
+        padding: 0 16px 10px;
+        border-radius: 0;
+        background-color: $palette-white;
+      }
+
       position: fixed;
     }
   }
