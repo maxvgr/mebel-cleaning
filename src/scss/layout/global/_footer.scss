@@ -12,7 +12,6 @@
 
   margin: 52px 0;
 
-
   &__wrapper {
     @include breakpoint($breakpoint-laptop) {
       grid-template-columns: 2.5fr 0.7fr 1fr 1.2fr;
@@ -103,21 +102,26 @@
   &__copyright {
     color: #9b9b9b;
     line-height: 20px; /* 125% */
+
+    span {
+      display: block;
+      padding-top: 8px;
+    }
   }
-
-
 
   &__copyright {
     @include breakpoint($breakpoint-notebook) {
       grid-row: 2/3;
       grid-column: 1/2;
+      order: -1;
     }
     @include breakpoint($breakpoint-tablet) {
       grid-row: 3/4;
       grid-column: 1/2;
     }
     @include breakpoint($breakpoint-mobile) {
-      margin-top: 18px;
+      margin-top: 0;
+      text-align: left;
     }
   }
 
@@ -143,23 +147,41 @@
     font-size: 18px;
     letter-spacing: 0.54px;
 
+    &--mail {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%; /* 23.4px */
+    }
+
     &--hidden {
       @include breakpoint($breakpoint-laptop) {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
+        gap: 0;
+        justify-content: space-between;
       }
 
       display: none;
+
+      .footer__contacts--mail {
+        width: 100%;
+      }
+
+      .socials__items {
+        gap: 11px;
+      }
     }
   }
 
   &__last {
     @include breakpoint($breakpoint-notebook) {
-      grid-column: 2/4;
+      flex-direction: row;
+      grid-column: 1/4;
+      justify-content: space-between;
     }
     @include breakpoint($breakpoint-tablet) {
       grid-row: 3/4;
-      grid-column: 2/3;
+      grid-column: 1/3;
     }
     @include breakpoint($breakpoint-mobile) {
       margin-top: 18px;
@@ -168,7 +190,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
+    // justify-content: space-between;
+
     color: #9b9b9b;
     text-align: right;
 
@@ -186,7 +209,8 @@
 
       width: min-content;
       margin-top: 15px;
-      margin-bottom: -40px;
+      margin-bottom: 20px;
+      // margin-bottom: -40px;
 
       &--hidden {
         @include breakpoint($breakpoint-notebook) {
@@ -198,14 +222,15 @@
     }
   }
 
-
-
   &__politika {
+    @include breakpoint($breakpoint-notebook) {
+      margin-bottom: 0;
+    }
     @include breakpoint($breakpoint-mobile) {
       text-align: left;
     }
 
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   &__artfactor {
@@ -214,6 +239,7 @@
     }
     @include breakpoint($breakpoint-notebook) {
       grid-column: 1/4;
+      margin-top: 0;
       text-align: center;
     }
     @include breakpoint($breakpoint-tablet) {
@@ -224,6 +250,7 @@
     }
 
     grid-column: 5/6;
+    margin-top: -20px;
     color: #9b9b9b;
     text-align: right;
   }
@@ -237,7 +264,7 @@
       position: relative;
       padding: 55px 74px;
       border-radius: 25px;
-      background: linear-gradient(89deg, #17A5D3 5.9%, #008EBC 91.16%);
+      background: linear-gradient(89deg, #17a5d3 5.9%, #008ebc 91.16%);
     }
 
     &__close {
@@ -346,7 +373,6 @@
         //   }
         // }
       }
-
     }
   }
 }
