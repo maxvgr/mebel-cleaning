@@ -1,9 +1,80 @@
 #page-service {
   .slide__wrapper {
+    @include breakpoint($breakpoint-big-tablet) {
+      padding-top: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding-top: 30px;
+    }
+
     padding-top: 76px;
   }
 
   .slide {
+    height: 355px;
     background-image: url("../assets/images/pages/page-service/bg.jpg");
+
+    &__title {
+      @include breakpoint($breakpoint-tablet) {
+        padding-top: 0;
+        font-size: 36px;
+      }
+
+      font-weight: 900;
+      font-size: 52px;
+    }
+  }
+
+  .info {
+    &__wrapper {
+      @include breakpoint($breakpoint-notebook) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 80px;
+      padding-top: 53px;
+    }
+
+    &__title {
+      padding-bottom: 10px;
+      color: $color-text__blue;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 126%; /* 30.24px */
+      text-transform: uppercase;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 126%; /* 22.68px */
+
+      p:not(:last-child) {
+        padding-bottom: 10px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+      align-items: center;
+    }
+  }
+
+  .visiting-cleaning {
+    @include breakpoint($breakpoint-mobile) {
+      background: #eeeeee;
+    }
+
+    background: url('../assets/images/sections/faq/bg.svg') #eeeeee;
+    background-position: bottom 34px right 25px;
+    background-repeat: no-repeat;
+  }
+
+  .professional__brands {
+    padding-bottom: 89px;
   }
 }
