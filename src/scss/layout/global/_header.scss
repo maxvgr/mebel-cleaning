@@ -50,7 +50,6 @@
         width: calc(100% - 32px)
       }
       @include breakpoint($breakpoint-mobile) {
-        z-index: 15;
         width: 100%;
         margin: 0 -16px;
         padding: 0 16px 10px;
@@ -59,6 +58,8 @@
       }
 
       position: fixed;
+      z-index: 15;
+      background: #04171eaa;
     }
   }
 
