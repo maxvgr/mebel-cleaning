@@ -1,4 +1,5 @@
-.dropdown-nav {
+.dropdown-nav,
+.menu-item-has-children {
   position: relative;
 
   @media (hover: hover) {
@@ -183,8 +184,5 @@
     &::after {
       transform: rotate(180deg);
     }
-
   }
 }
-
-

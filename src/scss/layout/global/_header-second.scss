@@ -46,6 +46,13 @@
       padding: 12px 70px 10px;
     }
 
+    &--fixed {
+      position: fixed;
+      z-index: 15;
+      width: 100%;
+      background: $palette-white;
+    }
+
     .header__logo--description {
       // @include breakpoint($breakpoint-mobile) {
       //   font-weight: 300;
@@ -212,5 +219,12 @@
     .nav__item {
       padding: 7px 0;
     }
+  }
+
+  .dropdown-nav > a::after,
+  .dropdown-nav > span::after,
+  .menu-item-has-children > a::after,
+  .menu-item-has-children > span::after {
+    filter: invert(100%);
   }
 }
