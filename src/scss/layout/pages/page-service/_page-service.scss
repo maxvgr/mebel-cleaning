@@ -1,4 +1,15 @@
 #page-service {
+  .page-prices {
+    @include breakpoint($breakpoint-big-tablet) {
+      padding-top: 50px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding-top: 30px;
+    }
+
+    padding: 76px 0;
+  }
+
   .slide__wrapper {
     @include breakpoint($breakpoint-big-tablet) {
       padding-top: 50px;
