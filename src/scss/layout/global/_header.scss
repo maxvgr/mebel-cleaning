@@ -37,7 +37,7 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 112px 1fr 1fr;
     gap: 18px;
     align-items: center;
     margin-top: 10px;
@@ -142,6 +142,17 @@
     }
   }
 
+  &__time {
+    @include breakpoint($breakpoint-big-tablet) {
+      display: none;
+    }
+
+    color: $color-text__white;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+  }
+
   &__contacts {
     @include breakpoint($breakpoint-big-tablet) {
       grid-row: 3/4;
@@ -170,7 +181,7 @@
 
     color: $color-text__white;
     font-weight: 600;
-    font-size: $font__text--big;
+    font-size: 16px;
     letter-spacing: 0.54px;
     white-space: nowrap;
   }
@@ -186,9 +197,12 @@
 
     .button {
       @include breakpoint($breakpoint-mobile) {
-        padding: 13px 18px;
+        // padding: 13px 18px;
+
         letter-spacing: 0;
       }
+
+      padding: 13px 15px;
     }
   }
 

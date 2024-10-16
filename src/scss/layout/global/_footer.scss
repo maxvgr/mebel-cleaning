@@ -130,6 +130,29 @@
     padding-top: 15px;
   }
 
+  &__time {
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
+    }
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%; /* 16.8px */
+
+    &--nobr {
+      @include breakpoint($breakpoint-laptop) {
+        display: block;
+      }
+
+      padding-top: 10px;
+      padding-bottom: 19px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
   &__contacts {
     @include breakpoint($breakpoint-laptop) {
       display: none;
@@ -172,6 +195,8 @@
       }
     }
   }
+
+
 
   &__last {
     @include breakpoint($breakpoint-notebook) {
