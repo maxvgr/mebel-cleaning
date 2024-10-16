@@ -31,11 +31,13 @@ if (document.querySelector('.header-second__wrapper')) {
   });
 };
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("is-active");
-  mobileNavs.classList.toggle("is-active");
-  // overlay.classList.toggle("is-active");
-});
+if (document.querySelector('.hamburger--spin')) {
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("is-active");
+    mobileNavs.classList.toggle("is-active");
+    // overlay.classList.toggle("is-active");
+  });
+};
 
 catalog.addEventListener("click", () => {
   hiddenmenu.classList.toggle("is-active");
