@@ -12,6 +12,7 @@
       font-size: 50px;
     }
     @include breakpoint($breakpoint-mobile) {
+      flex-wrap: wrap;
       font-size: 40px;
       text-align: center;
     }
@@ -27,11 +28,19 @@
   }
 
   &__send {
+    @include breakpoint($breakpoint-big-tablet) {
+      font-size: 22px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      font-size: 20px;
+    }
+
     display: flex;
     gap: 9px;
+    align-items: center;
     color: #6cab1e;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 40px;
     line-height: 114%; /* 25.08px */
     text-align: right;
     text-transform: none;
