@@ -16,11 +16,35 @@
       text-align: center;
     }
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: $color-text__grey;
     font-weight: 600;
     font-size: 60px;
     line-height: 114%; /* 68.4px */
     text-transform: uppercase;
+  }
+
+  &__send {
+    display: flex;
+    gap: 9px;
+    color: #6cab1e;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 114%; /* 25.08px */
+    text-align: right;
+    text-transform: none;
+
+    svg {
+      transition: $transition-time ease;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(8px);
+      }
+    }
   }
 
   &__wrapper {
@@ -54,14 +78,13 @@
   }
 
   &__name {
-    color: #22272B;
+    color: #22272b;
     font-weight: 500;
     font-size: 22px;
-    Line-height: 114%; /* 25.08px */
+    line-height: 114%; /* 25.08px */
   }
 
   &__text {
     padding-top: 11px;
   }
-
 }

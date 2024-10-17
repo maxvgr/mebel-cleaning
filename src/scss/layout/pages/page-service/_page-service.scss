@@ -83,9 +83,18 @@
     background: url('../assets/images/sections/faq/bg.svg') #eeeeee;
     background-position: bottom 34px right 25px;
     background-repeat: no-repeat;
+
+    &__image {
+      picture {
+        max-width: 316px;
+        max-height: 271px;
+      }
+    }
   }
 
   .professional__brands {
     padding-bottom: 89px;
   }
+
+
 }
